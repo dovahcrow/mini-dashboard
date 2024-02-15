@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import ReactJson from 'react-json-view'
@@ -211,17 +212,6 @@ const Hit = ({ hit, imageKey }) => {
 
   return (
     <CustomCard>
-      <Box width={240} mr={4} flexShrink={0}>
-        {hit[imageKey] ? (
-          <LazyLoadImage
-            src={hit[imageKey] || null}
-            width="100%"
-            style={{ borderRadius: 10 }}
-          />
-        ) : (
-          <EmptyImage />
-        )}
-      </Box>
       <ContentContainer>
         {hasFields &&
           Object.keys(hit._highlightResult)
